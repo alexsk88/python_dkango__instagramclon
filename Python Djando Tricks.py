@@ -11,4 +11,16 @@ deactivate
 
 
 pip freeze
-# Si deseamos ver las librerías instaladas en el ambiente:
+# Si deseamos ver las librerías instaladas en el ambiente
+
+pip install django -U
+# Instalacion de Django
+
+django-admin
+# ver la interfaz de Django
+
+django-admin startproject platzigram .
+# Crea un projecto de Django
+
+python3 manage.py runserver
+# Start project

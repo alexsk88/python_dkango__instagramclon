@@ -1,1 +1,1 @@
-# python_dkango__instagramclon
+# python_django__instagramclon

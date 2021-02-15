@@ -37,3 +37,34 @@ python manage.py makemigrations
 python manage.py migrate
 # Va a aplicar esos cambios en nuestra base de datos.
 
+python manage.py shell
+# Abrir LA CONSOLA de Django.
+
+
+    from posts.models import User # Important import the model !!
+    b= User.objects.create(email='sashca@sashca.com',first_name='sashca',last_name='nova',password='sashca',is_admin=True)
+    b.save()
+    # Crear Un usuario desde la shell
+
+
+    nova= User()
+    nova.email='alex@alex.com'
+    nova.first_name='Alex'
+    nova.last_name='nova'
+    nova.password='alex'
+    nova.is_admin=False
+    nova.save()
+    # Otra manera de crear
+
+    nova.delete()
+    # Borrar un user
+
+
+    User.objects.all()
+    # Ver los objetos de la table
+
+    User.objects.get(email="hermail@mail.com")
+    # Buscar User -> como un find de rails
+
+    User.objects.filter(email__endswith="hermail@mail.com")
+    # Buscar con where, que terminen en %*algo*%

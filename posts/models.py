@@ -11,6 +11,8 @@ class User(models.Model):
     first_name = models.EmailField(max_length=100)
     last_name = models.EmailField(max_length=100)
 
+    is_admin = models.BooleanField(default=False)
+
     bio = models.TextField(blank=True)
     birthday = models.DateField(blank=True, null=True)
     
@@ -19,3 +21,8 @@ class User(models.Model):
     
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        """Return email"""
+        return self.email
+    

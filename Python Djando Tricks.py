@@ -28,7 +28,12 @@ python3 manage.py runserver
 import pdb; pdb.set_trace()
 # Hacer un debbuger
 
-
 python3 manage.py startapp NAMEHERE
 # Crear una APP
+
+python manage.py makemigrations
+# Va a buscar los cambios en nuestros modelos y los va a reflejar en un archivo.
+
+python manage.py migrate
+# Va a aplicar esos cambios en nuestra base de datos.
 

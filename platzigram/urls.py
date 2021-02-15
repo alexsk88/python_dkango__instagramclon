@@ -17,7 +17,9 @@ Including another URLconf
 # from django.contrib import admin
 from django.urls import path
 from django.http import HttpResponse
-from platzigram import views
+from platzigram import views as local_views
+
+from posts import views as posts_views
 
 # def hello_world(request):
 #     """Return a greeting."""
@@ -29,8 +31,11 @@ from platzigram import views
 # ]
 urlpatterns = [
 
-    path('hello-world/', views.hello_world),
-    path('hi/', views.hi),
-    path('parametros/<str:name>/<int:age>/', views.parametros),
+    path('', local_views.hello_world),
+    path('hello-world/', local_views.hello_world),
+    path('hi/', local_views.hi),
+    path('parametros/<str:name>/<int:age>/', local_views.parametros),
 
+    # Rutas de la Aplicacion
+    path('posts/', posts_views.list_posts),
 ]

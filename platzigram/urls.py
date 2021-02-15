@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 """ QUE ES ADMIN ??"""
-from django.contrib import admin
+# from django.contrib import admin
 from django.urls import path
 from django.http import HttpResponse
 from platzigram import views
@@ -31,5 +31,6 @@ urlpatterns = [
 
     path('hello-world/', views.hello_world),
     path('hi/', views.hi),
+    path('parametros/<str:name>/<int:age>/', views.parametros),
 
 ]

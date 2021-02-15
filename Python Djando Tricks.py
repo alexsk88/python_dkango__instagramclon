@@ -24,3 +24,11 @@ django-admin startproject platzigram .
 
 python3 manage.py runserver
 # Start project
+
+import pdb; pdb.set_trace()
+# Hacer un debbuger
+
+
+python3 manage.py startapp NAMEHERE
+# Crear una APP
+

@@ -57,10 +57,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'platzigram.urls'
 
+# Tenemos que decirle a nuestrea app donde estan las vistas
+# Rails aqui si es mejor !!
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+             BASE_DIR / 'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,7 +127,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
+# Los archivos estaticos hay que configurarlo asi  ↓↓↓↓↓
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    BASE_DIR / 'static',
+)
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+]
 
-MEDIA_ROOT =  BASE_DIR / 'media'
+MEDIA_ROOT =  BASE_DIR / 'static'
 MEDIA_URL = '/media/'

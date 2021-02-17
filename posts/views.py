@@ -80,4 +80,4 @@ def list_posts_test(request):
 
 def list_posts(request):
     """ List of posts with html render"""
-    return render(request,'feed.html',{'posts': posts})
+    return render(request,'posts/feed.html',{'posts': posts})

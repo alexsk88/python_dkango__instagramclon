@@ -68,3 +68,12 @@ python manage.py shell
 
     User.objects.filter(email__endswith="hermail@mail.com")
     # Buscar con where, que terminen en %*algo*%
+
+    from django.contrib.auth.models import User
+    u = User.objects.create_user(username='yesika', password='admin123')
+    # Crear un user con Django(ya viene configurado for more security)
+
+python3 manage.py createsuperuser
+# Crear un SUPERuser con Django(me pide user, mail, password)
+
+

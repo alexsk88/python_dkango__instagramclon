@@ -26,6 +26,7 @@ from django.http import HttpResponse
 from platzigram import views as local_views
 
 from posts import views as posts_views
+from users import views as users_views
 
 # def hello_world(request):
 #     """Return a greeting."""
@@ -39,13 +40,28 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),
     path('', local_views.hello_world),
-    path('hello-world/', local_views.hello_world),
+    path('hello-world/', local_views.hello_world, name='hello_world'),
     path('hi/', local_views.hi),
     path('parametros/<str:name>/<int:age>/', local_views.parametros),
 
     # Rutas de la Aplicacion
-    path('posts/', posts_views.list_posts),
+    path('posts/', posts_views.list_posts,name='feed'),
+    path('users/login', users_views.login_view, name='login'),
+    path('users/logout', users_views.logout_view, name='logout'),
+    path('users/signup/', users_views.signup, name='signup'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 ## + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-## Para agregar el path de las imagenes
+# urlpatterns = [
+
+#     path('admin/', admin.site.urls),
+
+#     path('hello-world/', local_views.hello_world, name='hello_world'),
+#     path('sorted/', local_views.sort_integers, name='sort'),
+#     path('hi/<str:name>/<int:age>/', local_views.say_hi, name='hi'),
+
+#     path('posts/', posts_views.list_posts, name='feed'),
+
+#     path('users/login/', users_views.login_view, name='login')
+
+# ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

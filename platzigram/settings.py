@@ -139,3 +139,4 @@ STATICFILES_FINDERS = [
 
 MEDIA_ROOT =  BASE_DIR / 'static'
 MEDIA_URL = '/media/'
+LOGIN_URL = 'login'

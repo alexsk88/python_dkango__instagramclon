@@ -7,6 +7,9 @@ from django.shortcuts import render
 # Django
 from django.http import HttpResponse
 
+# Decorador para auth
+from django.contrib.auth.decorators import login_required
+
 # Utilities
 from datetime import datetime
 
@@ -77,7 +80,7 @@ def list_posts_test(request):
         # para que python detecte esto con  **post el interpreta esas lineas
     return HttpResponse('<br>'.join(content))
 
-
+@login_required
 def list_posts(request):
     """ List of posts with html render"""
     return render(request,'posts/feed.html',{'posts': posts})

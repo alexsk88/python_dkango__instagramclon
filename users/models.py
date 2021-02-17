@@ -21,6 +21,7 @@ class Profile(models.Model):
     # Se puiede recibir un metodo too
     ## See Documentation
 
+    # OneToOneField solo pudee haber un user con ese perfil
     user = models.OneToOneField(User,on_delete=models.CASCADE)
     
     website = models.URLField(max_length=200,blank=True)

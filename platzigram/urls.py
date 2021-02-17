@@ -15,6 +15,12 @@ Including another URLconf
 """
 """ QUE ES ADMIN ?? Es para acceder al menu de admins como wordpress"""
 from django.contrib import admin
+
+# Para ver la imagenes
+from django.conf import settings
+from django.conf.urls.static import static
+
+
 from django.urls import path
 from django.http import HttpResponse
 from platzigram import views as local_views
@@ -39,4 +45,7 @@ urlpatterns = [
 
     # Rutas de la Aplicacion
     path('posts/', posts_views.list_posts),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+## + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+## Para agregar el path de las imagenes

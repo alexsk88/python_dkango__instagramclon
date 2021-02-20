@@ -47,6 +47,10 @@ class Profile(models.Model):
         """Return username."""
         return self.user.username
 
+    def get_full_name(self):
+        """Return full_name."""
+        return self.user.username 
+
 
 """ OJO POR CADA APP QUE CREE HAY QUE REGISTER IN SETTINGS.PY"""
 """ OJO POR CADA APP QUE CREE HAY QUE REGISTER IN SETTINGS.PY"""

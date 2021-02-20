@@ -6,6 +6,28 @@
 
 ## Vistas De la APP
 
+<img src="blobs/log.png"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
+&nbsp;
+&nbsp;
+<img src="blobs/register.png"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
+&nbsp;
+&nbsp;
+<img src="blobs/home.png"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
+&nbsp;&nbsp;
+<img src="blobs/form2.png"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
+&nbsp;&nbsp;
+<img src="blobs/form1.png"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
+&nbsp;&nbsp;
 
 ### Informacion de Django
 #### * Modelo MVC normal
@@ -19,10 +41,6 @@
 <img src="blobs/MTV.png"
      alt="Markdown Monster icon"
      style="float: left; margin-right: 10px;" />
-
-     alt="Markdown Monster icon"
-     style="float: left; margin-right: 10px;" />
-
 
 &nbsp;
  #### * Midlewares Estructure

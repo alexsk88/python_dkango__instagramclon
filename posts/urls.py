@@ -8,8 +8,6 @@ from posts import views
 
 urlpatterns = [
 
-    # view=views.list_posts,
-    # Pasa a ser un list view de Django
     path(
         route='',
         view=views.PostsFeedView.as_view(),
@@ -18,7 +16,13 @@ urlpatterns = [
 
     path(
         route='posts/new/',
-        view=views.create_post,
+        view=views.CreatePostView.as_view(),
         name='create_post'
     ),
-  ]
+
+    path(
+        route='/<int:pk>/',
+        view=views.PostDetailView.as_view(),
+        name='detail'
+    )
+]

@@ -16,6 +16,11 @@
      style="float: left; margin-right: 10px;" />
 &nbsp;
 &nbsp;
+<img src="blobs/profi.png"
+     alt="Markdown Monster icon"
+     style="float: left; margin-right: 10px;" />
+&nbsp;
+&nbsp;
 <img src="blobs/home.png"
      alt="Markdown Monster icon"
      style="float: left; margin-right: 10px;" />
